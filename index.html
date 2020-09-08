@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Prosjektoppgave 1</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="jquery/jq-script.js"></script>
+    <script src="resources/js/canvas.js"></script>
+    <script src="resources/js/svg.js"></script>
+    <link rel="stylesheet" type="text/css" href="resources/css/standard.css" />
+  </head>
+  <body>
+    <!-- Header element -->
+    <div id="front-element">
+      <div id="front-content">
+        <h1>Busster Minal</h1>
+        <h3>Professional creator of bicep-curling robots</h3>
+        <p id="info-text">
+          Busster Minal is a true genius who has graced this world with his presence from June 5, 1997 to the present day. He is among the most influential
+          artists in history, having left a significant legacy not only in the realm of art but in science as well, each discipline informing his mastery of the
+          other. Busster lives in a golden age of creativity and contributes his unique genius to virtually everything he touches. Today, no name better seems
+          to symbolize our age than Busster Minal.
+        </p>
+      </div>
+      <div id="leonardo">
+        <img src="resources/img/leonardo.png" width="100%" height="100%" />
+      </div>
+      <div id="michelangelo">
+        <img src="resources/img/michel.png" width="100%" height="100%" />
+      </div>
+    </div>
+    <div id="custom-separator"></div>
+
+    <!-- Gallery section -->
+    <div id="gallery">
+      <p id="gallery-header">Gallery</p>
+    </div>
+    <div id="custom-separator"></div>
+
+    <div id="border">
+      <div class="wrapper">
+        <!-- Information of SVG drawing -->
+        <div class="gallery-information">
+          <h1 style="color: white; font-size: 30px; line-height: 100%">SVG creation: The bicep curling robot</h1>
+          <p>Click on my body and watch me curl! Hover over my body and click my antenna to see me change color.</p>
+          <p>
+            I have lovingly worked into this piece, adding texture and color, light, and shadows. I have used my pallet knives, brushes, and scratching objects
+            also. This artwork is special to me because it was whilst creating this piece that I understood my reason to be here. My realization said that I am
+            here to give color to the world. I wanted to create a big bright colorful robot full of happiness and vibrant energy.
+          </p>
+        </div>
+
+        <!-- SVG drawing -->
+        <div class="svgDiv">
+          <svg id="parent" width="100%">
+            <svg id="robot" width="100%" height="100%">
+              <!-- Top-->
+              <rect id="pole" x="54%" y="5%" width="2%" height="5%" style="fill: blue" />
+              <circle id="light" cx="55%" cy="3.8%" r="2%" stroke="black" stroke-width="3" fill="red" />
+
+              <!-- Head -->
+              <rect id="head" x="45%" y="10%" width="20%" height="20%" style="fill: grey" />
+              <circle id="left-eye" cx="50%" cy="15%" r="2.5%" stroke="black" stroke-width="3" fill="yellow" />
+              <circle id="right-eye" cx="60%" cy="15%" r="2.5%" stroke="black" stroke-width="3" fill="yellow" />
+              <rect id="mouth" x="50%" y="22%" width="10%" height="3%" style="fill: red" stroke="black" />
+              <rect id="neck" x="52.5%" y="30%" width="5%" height="7%" style="fill: blue" />
+
+              <!-- Body -->
+              <rect id="body" x="40%" y="37%" width="30%" height="45%" style="fill: grey" />
+
+              <!-- Feet -->
+              <rect id="left-leg" x="45%" y="82%" width="5%" height="10%" style="fill: rgb(177, 24, 24)" />
+              <rect id="right-leg" x="60%" y="82%" width="5%" height="10%" style="fill: rgb(25, 0, 255)" />
+              <circle id="left-foot" cx="47.5%" cy="92%" r="4%" stroke="black" stroke-width="3" fill="yellow" />
+              <circle id="right-foot" cx="62.5%" cy="92%" r="4%" stroke="black" stroke-width="3" fill="yellow" />
+
+              <!-- Arms -->
+              <rect id="right-arm" x="72%" y="50%" width="3%" height="10%" style="fill: rgb(36, 43, 128)">
+                <animateTransform id="right-arm-trans" attributeName="transform" attributeType="XML" type="rotate" begin="indefinite" />
+                <animateTransform id="right-arm-transd" attributeName="transform" attributeType="XML" type="rotate" begin="left-arm-trans.end+0s" />
+              </rect>
+              <rect id="right-arm2" x="72%" y="58%" width="3%" height="13%" style="fill: rgb(36, 43, 128)">
+                <animateTransform id="right-arm2-trans" attributeName="transform" attributeType="XML" type="rotate" begin="indefinite" />
+                <animateTransform id="right-arm2-transd" attributeName="transform" attributeType="XML" type="rotate" begin="left-arm2-trans.end+0s" />
+              </rect>
+              <rect id="right-shoulder" x="70%" y="45%" width="7%" height="7%" style="fill: rgb(177, 24, 24)" />
+
+              <rect id="left-arm" x="35%" y="50%" width="3%" height="10%" style="fill: rgb(36, 43, 128)">
+                <animateTransform id="left-arm-trans" attributeName="transform" attributeType="XML" type="rotate" begin="indefinite" />
+                <animateTransform id="left-arm-transd" attributeName="transform" attributeType="XML" type="rotate" begin="left-arm-trans.end+0s" />
+              </rect>
+              <rect id="left-arm2" x="35%" y="58%" width="3%" height="13%" style="fill: rgb(36, 43, 128)">
+                <animateTransform id="left-arm2-trans" attributeName="transform" attributeType="XML" type="rotate" begin="indefinite" />
+                <animateTransform id="left-arm2-transd" attributeName="transform" attributeType="XML" type="rotate" begin="left-arm2-trans.end+0s" />
+              </rect>
+              <rect id="left-shoulder" x="33%" y="45%" width="7%" height="7%" style="fill: rgb(177, 24, 24)" />
+
+              <!-- Weights -->
+              <image id="left-weight" href="resources/img/weight.png" height="20%" width="20%" x="26%" y="55%">
+                <animateTransform id="left-weight-trans" attributeName="transform" attributeType="XML" type="rotate" begin="indefinite" />
+                <animateTransform id="left-weight-transd" attributeName="transform" attributeType="XML" type="rotate" begin="left-weight-trans.end+0s" />
+              </image>
+              <image id="right-weight" href="resources/img/weight.png" height="20%" width="20%" x="65%" y="55%">
+                <animateTransform id="right-weight-trans" attributeName="transform" attributeType="XML" type="rotate" begin="indefinite" />
+                <animateTransform id="right-weight-transd" attributeName="transform" attributeType="XML" type="rotate" begin="right-weight-trans.end+0s" />
+              </image>
+            </svg>
+          </svg>
+        </div>
+
+        <!-- Canvas drawing -->
+        <div class="canvasDiv">
+          <canvas id="roboCanvas"></canvas>
+        </div>
+        <!-- Information of Canvas element -->
+        <div class="gallery-information">
+          <h1 style="color: white; font-size: 30px; line-height: 100%">Canvas creation: The bicep curling robot</h1>
+          <p>Click on my body and watch me curl!</p>
+          <p>
+            I have lovingly worked into this piece, adding texture and color, light, and shadows. I have used my pallet knives, brushes, and scratching objects
+            also. This artwork is special to me because it was whilst creating this piece that I understood my reason to be here. My realization said that I am
+            here to give color to the world. I wanted to create a big bright colorful robot full of happiness and vibrant energy.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Documentation  -->
+    <div id="documentation">
+      <input type="button" id="hideshow" value="Show / hide documentation" />
+      <div id="docu-box">
+        <div class="row">
+          <div class="text-column">
+            <h4 class="docu-question">Gi en beskrivelse av hvordan du har brukt CSS-grid og Flexbox-layout, forklar dine valg.</h4>
+            <p class="docu-answer">
+              I chose to primarily use CSS-grid because it is a structured layout which was easy to get started with. Flexbox is primarily designed for
+              one-dimensional layouts whereas grid is engineered to create two-dimensional layouts. My gallery required a two-dimensional layout which made it
+              an easy choice. <br />
+              <br />
+              However, this documentation section is created using flexbox, and it does a great job in creating a one-dimensional layout like this. I am aware
+              that flexbox can also handle two-dimensional layouts, but it is not specifically designed for it like CSS grid is, and it therefore requires a bit
+              more code to make right. What I do like about flexbox though, is the ability to fine-tune the alignment of components to a higher degree than
+              what’s possible with CSS grid.
+            </p>
+            <h4 class="docu-question">Gi en beskrivelse av hvordan du har brukt HTML canvas og SVG i HTML.</h4>
+            <p class="docu-answer">
+              I have declared all SVG components and corresponding animation transformations in the HTML document, however, the animationTransform elements are
+              missing some parameters which I have chosen to set in a javascript file (svg.js). This is because I wanted to control the animations using
+              javascript as it gives me a bit more freedom and possibilities in state management. <br />
+              <br />
+              To ensure a responsive design using SVG components I chose to set all the object’s x and y coordinates as well as height and width as a percentage
+              of the height/width of the parent container. The robot always maintains an aspect ratio of 1:0.8 (width:height). Similarly, I have used
+              percentages on all other elements as well to ensure a responsive design throughout the website. <br />
+              <br />For canvas I simply declared a canvas element in the HTML document and controlled everything using javascript (canvas.js). I am using an
+              eventlistener to listen to clicks on the canvas to start the animation. Animation objects are created using functions that resembles classes with
+              a constructor and custom functions, as they need to be handled a little differently than other objects. <br />
+              <br />Similar to the SVG components, the width, height and x and y coordinates of the canvas elements are set using percentages of the parent
+              container to ensure a responsive design.
+            </p>
+          </div>
+          <div class="pic-column">
+            <h4 class="docu-question">Gi en kort beskrivelse av hvordan du har brukt jQuery</h4>
+            <p class="docu-answer">
+              I have used jQuery for simple transformations of SVG objects. The transformation includes hovering over the body of the robot and clicking the
+              robot’s antenna. I made similar transformations with canvas using javascript but my method of creating these transformations proved incompatible
+              with multiple browsers so I removed them for a better user experience. <br />
+              <br />I also used jQuery to ensure a responsive design by setting relative width/heights of my SVG elements. In addition, jQuery is used for
+              hiding and showing this documentation section.
+            </p>
+            <h4 class="docu-question">Gi en kort beskrivelse av hvordan du har utført cross-browser testing</h4>
+            <p class="docu-answer">
+              I have tested my website in Chrome, Edge and Firefox and all functionality is compatible. However, as previously mentioned, some functionality
+              implemented with HTML canvas proved incompatible with Edge and Firefox and I chose to remove it. When visiting sources such as W3School and
+              Stackoverflow I made sure to check if the element I was evaluating was compatible with most browsers. <br />
+              <br />
+              Older versions of IE are known for not supporting animation transformations, and hence my website is not be compatible with their standards, but I
+              chose not to struggle with getting my website IE compatible as it is an outgoing web browser anyway.
+            </p>
+            <h4 class="docu-question">List opp de viktigste (mest nyttige) informasjonskildene du har brukt (tutorials, websider, bøker).</h4>
+            <p class="docu-answer">
+              <a href="https://www.w3schools.com/">W3 Schools</a> (Various pages regarding HTML, CSS and Javascript) <br />
+              <a href="https://stackoverflow.com/">Stack overflow</a> (Various specific topics regarding HTML, CSS, Javascript and jQuery)
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
